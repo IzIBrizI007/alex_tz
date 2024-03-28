@@ -1,0 +1,28 @@
+body {
+  color: #fff;
+  background-color: #000;
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+}
+
+.container {
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.button-style {
+  padding: 15px 35px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: $color-brand-violet;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+}
