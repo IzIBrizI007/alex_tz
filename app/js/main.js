@@ -1,39 +1,42 @@
 $(function () {
 
+  function lookTime() {
+
   let dateUTC = new Date();
   let hourUTC = dateUTC.getUTCHours();
-  let minutesUTC = dateUTC.getUTCMinutes();
-  let video = document.querySelector('.video__block');
-  let banner = document.querySelector('.banner');
+  const minutesUTC = dateUTC.getUTCMinutes();
+  const videoBlock = document.querySelector('.video__block');
+  const banner = document.querySelector('.banner');
+  const video = document.querySelector('.video');
   hourUTC += 2;
-  function lookTime() {
-    if (hourUTC >= 18) {
-    if (minutesUTC >= 0 && minutesUTC <= 20) {
-      video.style.display = "block";
+    
+    if (hourUTC >= 20) {
+    if (minutesUTC >= 0 && minutesUTC == 26) {
+      videoBlock.style.display = "block";
       banner.style.display = "none";
+      video.style.opacity = "1";
     }
   };
   
     if (hourUTC >= 18 && minutesUTC >= 20 && hourUTC < 21 ||
     hourUTC >= 19 && minutesUTC >= 0 && hourUTC < 21) {
-    video.style.display = "block";
-    banner.style.display = "block";
+      videoBlock.style.display = "block";
+      banner.style.display = "flex";
+      setInterval(function interval() {
+        video.style.opacity = "1";
+      }, 1000);
   };
 
-    if (hourUTC > 21 || hourUTC  < 18) {
-    video.style.display = "none";
-    banner.style.display = "none";
+    if (hourUTC >= 20 || hourUTC  < 18) {
+      banner.style.display = "none";
+      setInterval(function interval() {
+        video.style.opacity = "1";
+      }, 1000);
+    };
   };
-  };
-
-  setInterval(lookTime, 1000);
+  lookTime();
+ 
   
-
-
-  
-  console.log(hourUTC);
-  console.log(minutesUTC);
-  console.log(dateUTC);
 
 
     

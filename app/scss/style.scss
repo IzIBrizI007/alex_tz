@@ -32,6 +32,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
+  opacity: 0;
 
   &::before {
     position: absolute;
@@ -269,6 +270,7 @@
 
   &__block {
     position: absolute;
+    display: none;
     top: 0;
     left: 0;
     right: 0;
